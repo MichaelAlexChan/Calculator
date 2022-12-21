@@ -56,11 +56,11 @@ button {
     
 }
 
-.item1, .item2, .item11 {
+#item1, #item2, #item15 {
     grid-column: span 2
 }
 
-.item6, .item10, .item12, .item13 {
+#item6, #item10, #item14, #item17 {
     font-weight: bold;
 }
 
