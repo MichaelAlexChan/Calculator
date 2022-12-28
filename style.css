@@ -15,6 +15,7 @@ body {
 }
 
 #calc-body {
+    background-color: #536999;
     width: 500px;
     height: 650px;
     border: 1px solid black;
