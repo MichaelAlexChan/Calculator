@@ -57,7 +57,11 @@ button {
     
 }
 
-#item1, #item2, #item15 {
+#item1 {
+    grid-column: span 4;
+}
+
+#item2, #item15 {
     grid-column: span 2
 }
 
