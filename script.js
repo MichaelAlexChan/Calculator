@@ -83,15 +83,29 @@ function determineInput(event, content) {
     if (content === 'clear all') {
         clearAll();
     }
-    
+
     else {
-        if ((content === '+' || content === '-' || content === 'x' || content === '÷') && num1Active) {
+        if ((content === '+' || content === '-' || content === 'x' || content === '÷')) {
             if (opActive) {
                 removeFromDisplay();
             }
-            opActive = true;
-            operator = content;
-            appendDisplay(event);
+            else {
+                if (num1Active) {
+
+                    //num1Active = false;
+                }
+                else {
+                    num1 = parseInt(num1.join(''));
+                    num2 = parseInt(num2.join(''));
+                    result = operate(operator, num1, num2);
+                    display.textContent = result;
+                    num2 = [];
+                    resultActive = true;
+                }
+                opActive = true;
+                operator = content;
+                appendDisplay(event);
+            }
         }
         else if (content === '=' && opActive) {
             if (!(resultActive)) {
